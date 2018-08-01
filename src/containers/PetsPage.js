@@ -14,7 +14,14 @@ class PetsPage extends Component {
 
   render() {
     return (
-      <div>Pets Page</div>
+      <div>
+        <div>Pets Page</div>
+        <Switch>
+          <Route exact path="/pets" component={PetsList} />
+          <Route path="/pets/new" component={PetsNew} />
+          <Route path="/pets/:petId" component={PetsShow} />
+        </Switch>
+      </div>
     )
   }
 };
